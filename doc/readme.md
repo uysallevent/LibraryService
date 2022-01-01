@@ -74,7 +74,7 @@ Library service returns the following status codes in its API:
 {
     "title":string,
     "author":ObjectId,
-    "price":12.5 number,
+    "price":number,
     "isbn":string,
     "language":string,
     "numberOfPages":number,
@@ -88,7 +88,7 @@ Library service returns the following status codes in its API:
     "_id": ObjectId,
     "title":string,
     "author":ObjectId,
-    "price":12.5 number,
+    "price":number,
     "isbn":string,
     "language":string,
     "numberOfPages":number,
