@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    links:
+      - mongo
+    env_file:
+      - /src/config/.env
+  mongo:
+    image: mongo
+    volumes:
+      - ./mongo-volume:/data/db
+    ports:
+      - "27017:27017"
